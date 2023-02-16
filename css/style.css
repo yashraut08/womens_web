@@ -1,0 +1,139 @@
+body{
+    background-color:antiquewhite;
+    margin: 0%;
+    font-size: 125%;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 42px;
+    /* padding-left: 40px; */
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+h3 {
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+nav {
+
+    background-color: #e2c498;
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display:inline;
+}
+
+nav a{
+    display:inline-block;
+    padding:20px;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    width: 15%;
+}
+
+nav a.current {
+    text-decoration-line: underline;
+    text-underline-offset: 10px;
+}
+
+.grid {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+    row-gap: 40px;
+    border-radius: 25px;
+    margin-top: 40px;
+}
+
+.grid div{
+    /* Set border properties, padding, and background color */
+    /* border: 5px solid black; */
+    border-radius: 25px;
+    background-color: #AD8E70;
+    
+}
+
+.grid div h3 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.grid div p {
+    line-height: 1;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+
+}
+
+.grid img{
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+img{
+    width: 45%;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.banner {
+    width: 100%;
+}
+
+p{
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+li {
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.intro {
+    width: 65%;
+    text-align: justify;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.skip-to-main {
+
+  left: 1%;
+  position: absolute;
+  transform: translateY(-100%);
+  background: #ffffff;
+  height: 30px;
+  padding: 8px;
+}
+
+.skip-to-main:focus {
+    transform: translateY(0%);
+}
+
+footer {
+    background-color: #e2c498;
+    padding: 5px;
+}
