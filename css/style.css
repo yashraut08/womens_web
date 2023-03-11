@@ -1,5 +1,5 @@
 body{
-    background-color:antiquewhite;
+    background-color: antiquewhite;
     margin: 0%;
     font-size: 125%;
 }
@@ -112,8 +112,8 @@ li {
     padding-right: 20px;
 }
 
-.intro {
-    width: 65%;
+.intro, .literature, .history, .feminist, .disclaimer {
+    width: 70%;
     text-align: justify;
     margin: auto;
     padding-top: 40px;
@@ -137,3 +137,236 @@ footer {
     background-color: #e2c498;
     padding: 5px;
 }
+
+/* ------------------------------------------------------------*/
+
+
+@media screen and (max-width: 400px){ 
+    
+    body {
+        background-image: url('../images/pngkey\ 1.png');
+        font-family: 'Poppins', 'Lato', sans-serif;
+        font-size: 14px;
+    }
+
+    /* nav {
+
+        background-color: #e2c498;
+        list-style: none;
+        text-align: center;
+    } */
+
+    nav {
+        overflow: hidden;
+        background-color: #e2c498;
+        position: relative;
+    }
+
+    #nav-list {
+        display: none;
+    }
+
+    nav a {
+        color: black;
+        /* padding: 14px 16px; */
+        width: auto;
+        text-decoration: none;
+        font-size: 16px;
+        display: flex;
+    }
+    
+    nav a.icon {
+        background: #e2c498;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    nav a:hover {
+        background-color: #927a57;
+        color: black;
+    }
+
+    .active {
+        background-color: #e2c498;
+        color: black;
+      }
+    /* nav li {
+        display:inline;
+    }
+
+
+    } */
+
+    nav a.current {
+        text-decoration-line: underline;
+        text-underline-offset: 4px;
+    }
+
+    h1{
+        font-family: 'Poppins', 'Lato', sans-serif;
+        text-align: center;
+        font-size: 28px;
+        /* padding-left: 40px; */
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+    
+    h2{
+        font-family: 'Poppins', 'Lato', sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-weight: 600;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .disclaimer p {
+        font-style: italic;
+        font-weight: 100;
+        font-size: 12px;
+    }
+
+    @keyframes move {
+        from {width: 25%;}
+        to {width: 45%;}
+      }
+
+    img{
+        width: 45%;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        animation-name: move;
+        animation-duration: 1s;
+
+    }
+
+    footer {
+        background-color: #e2c498;
+        padding: 5px;
+        text-align: center;
+        margin-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    footer, .thanks {
+        font-size: 12px;
+    }
+
+    .dict_child {
+        width: 85%;
+        margin: auto;
+        background-color: rgb(128, 135, 110);
+        border-radius: 8px;
+        padding-bottom: 5%;
+        
+    }
+
+    .dict_child h3 {
+        text-align: center;
+    }
+
+    .dict_child p {
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 10px;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .title_line p { 
+        width: 85%;
+        text-align: left;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+  
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    /* nav a{
+        padding:10px;
+        color: black;
+        text-decoration: none;
+        font-size: 12px;
+        width: 100%;
+        margin: auto;
+    } */
+
+
+    .grid {
+        width: 95%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 90%;
+        justify-content: center;
+        row-gap: 40px;
+        border-radius: 8px;
+        margin-top: 40px;
+    }
+
+    .grid div{
+        /* Set border properties, padding, and background color */
+        /* border: 5px solid black; */
+        border-radius: 8px;
+        background-color: #AD8E70;
+        
+    }
+    
+    .grid div h3 {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    
+    .grid div p {
+        line-height: 1;
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: justify;
+    
+    }
+    
+    .grid img{
+        width: 90%;
+        height: auto;
+        display: block;
+        margin: auto;
+        border-radius: 8px;
+        padding: 10px;
+    }
+  }
+  
+    
+    
+  
+     @media screen and (prefers-reduced-motion: reduce){
+      /*Turn off scroll*/
+      html{
+        scroll-behavior: auto; /* Removes scroll animation */
+      }
+    
+      /*Turn off transition*/
+      a.skip {
+        -webkit-transition: initial; /* sets to default setting */
+        transition: initial; /* sets to default setting */
+      }
+    
+      /*Turn off parallax*/
+      .intro{
+        background-attachment: initial;
+      }
+    }

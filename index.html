@@ -10,8 +10,9 @@
   <link rel="stylesheet" href="css/style.css">
 
   <!-- connect to a Google font -->  
-  
-  <!-- connect to a Font Aweseom font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Lato">
+  <!-- connect to a Font Awesome font -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- connect to a favicon -->
 
   <title>Women's Web</title>
@@ -22,12 +23,18 @@
   <header>
   
     <nav>
-        <ul>
+      <a href="#home" class="active">
+        <i class="fa fa-venus"></i>
+      </a>
+        <ul id="nav-list">
           <li><a class="current" href="index.html">About</a></li>
           <li><a href="literature.html">Literature</a></li>
           <li><a href="history.html">History and Politics</a></li>
           <li><a href="femdict.html">Feminist Dictionary</a></li>
         </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
     </nav>
     <h1> Woman's Web </h1> 
   </header>
@@ -44,26 +51,29 @@
       </p>
     </div>
 
-      Literature
-      <div>
+      
+      <div class="literature">
+        <h2>Literature</h2>
         <p>
           This page features books written by women and for women, books and essays about feminism, poems, plays, and bios of female writers.
         </p>
       </div>
-      History / Politics
-      <div>
+      
+      <div class="history"> 
+        <h2>History / Politics</h2>
         <p>
           This page features bios of important women in history and women currently in Congress or otherwise politically involved.
         </p>
       </div>
-      Feminist Dictionary
-      <div>
+     
+      <div class="feminist">
+        <h2>Feminist Dictionary</h2>
         <p>
           This page features a collection of important feminist terminology that might make reading easier. These will include formal definitions and my own understandings of the terms.
         </p>
       </div>
 
-    <div>
+    <div class="disclaimer">
       <p>
         <span>Kelsey's DISCLAIMER:</span> I did not know everything!! I'm only human - I'm still growing and learning and I have a limited knowledge of things, but I will do my best and work to make this page as inclusive and unbiased as possible.
       </p>
@@ -72,10 +82,24 @@
 
   <footer>
     <p class="thanks">
-      Thanks for visiting! <i></i>
+      Thanks for visiting! <i class="fa fa-star"></i><i></i>
     </p>
-    <p>Orginal content created by Kelsey Toporski 2019</p>
+  
+
+    <p>  <i class="fa fa-copyright"></i> Orginal content created by Kelsey Toporski 2019</p>
     <a href="#main">Back to Top</a>
   </footer>
+  </main>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("nav-list");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
 </body>
 </html>
