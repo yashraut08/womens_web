@@ -97,6 +97,10 @@ img{
     margin-top: 20px;
 }
 
+img:hover {
+    border: 2px solid black;
+}
+
 .banner {
     width: 100%;
 }
@@ -112,7 +116,7 @@ li {
     padding-right: 20px;
 }
 
-.intro, .literature, .history, .feminist, .disclaimer {
+.intro, .literature, .history_politics, .feminist, .disclaimer {
     width: 70%;
     text-align: justify;
     margin: auto;
@@ -194,17 +198,6 @@ footer {
         color: black;
     }
 
-    /* .active {
-        background-color: #e2c498;
-        color: black;
-      } */
-    /* nav li {
-        display:inline;
-    }
-
-
-    } */
-
     nav a.current {
         text-decoration-line: underline;
         text-underline-offset: 4px;
@@ -275,6 +268,7 @@ footer {
 
     .dict_child h3 {
         text-align: center;
+        font-weight: 700;
     }
 
     .dict_child p {
@@ -303,14 +297,39 @@ footer {
 
     }
 
-    /* nav a{
-        padding:10px;
-        color: black;
-        text-decoration: none;
-        font-size: 12px;
-        width: 100%;
+    .history {
+        width: 85%;
         margin: auto;
-    } */
+        background-color: rgb(128, 135, 110);
+        border-radius: 8px;
+        padding-bottom: 5%;
+    }
+    
+    .flex_container_history {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .history p {
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 10px;
+    }
+
+    .history h2 {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    figure figcaption {
+        text-align: center;
+        font-style: italic;
+        font-weight: 100;
+        font-size: 12px;
+        padding-top: 8px;
+        padding-bottom: 16px;
+    }
 
 
     .grid {
