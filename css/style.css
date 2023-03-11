@@ -242,6 +242,7 @@ footer {
         margin-top: 20px;
         animation-name: move;
         animation-duration: 1s;
+        border-radius: 8px;
 
     }
 
@@ -393,5 +394,10 @@ footer {
       /*Turn off parallax*/
       .intro{
         background-attachment: initial;
+      }
+
+      .animate {
+        /* Stop the animation */
+        animation: none;
       }
     }
