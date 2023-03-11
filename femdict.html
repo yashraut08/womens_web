@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="css/style.css">
 
   <!-- connect to a Google font -->  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Lato">
   <!-- connect to a Font Aweseom font -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- connect to a favicon -->
 
   <title>Women's Web - Dictionary</title>
@@ -19,12 +21,18 @@
 <body>
   <header>
     <nav>
-        <ul class="nav-list">
+      <a href="#home" class="active">
+        <i class="fa fa-venus"></i>
+      </a>
+        <ul id="nav-list">
           <li><a href="index.html">About</a></li>
           <li><a href="literature.html">Literature</a></li>
           <li><a href="history.html">History and Politics</a></li>
           <li><a class="current" href="femdict.html">Feminist Dictionary</a></li>
         </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
     </nav>
       <!-- definitions from meriam webster -->
       <!-- interpretations from
@@ -238,6 +246,17 @@
     </div>  
 
     </main>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("nav-list");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+      </script>
+
 
     <footer>
       <p class="thanks">
