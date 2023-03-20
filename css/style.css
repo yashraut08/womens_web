@@ -91,8 +91,9 @@ nav a.current {
 }
 
 img{
-    width: 45%;
-    display: block;
+    width: 100%;
+    height: auto;
+    /* display: block; */
     margin: auto;
     margin-top: 20px;
 }
@@ -144,6 +145,15 @@ footer {
 
 .icon {
     display: none;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em;
 }
 
  
@@ -250,7 +260,7 @@ footer {
         background-color: #e2c498;
         padding: 5px;
         text-align: center;
-        margin-top: 40px;
+        margin-top: 80px;
         padding-bottom: 20px;
     }
 
@@ -332,51 +342,233 @@ footer {
         padding-bottom: 16px;
     }
 
-
-    .grid {
-        width: 95%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 90%;
-        justify-content: center;
-        row-gap: 40px;
-        border-radius: 8px;
-        margin-top: 40px;
-    }
-
-    .grid div{
-        /* Set border properties, padding, and background color */
-        /* border: 5px solid black; */
-        border-radius: 8px;
-        background-color: #AD8E70;
-        
-    }
-    
-    .grid div h3 {
-        text-align: center;
-        padding-bottom: 20px;
-    }
-    
-    .grid div p {
-        line-height: 1;
-        font-size: 14px;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: justify;
-    
-    }
-    
-    .grid img{
-        width: 90%;
+    .card {
+        width: auto;
         height: auto;
-        display: block;
-        margin: auto;
-        border-radius: 8px;
-        padding: 10px;
+        position: relative;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        margin-top: 20%;
     }
+
+    .card > .front, .card > .back {
+        height: auto;
+        /* padding: 1em, 2em; */
+    }
+
+    .front {
+        border-radius: 10px;
+        transform: rotateY(0deg);
+        background-color: #ffffff;
+        margin-top: 20%;
+    }
+
+    .front h3 {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .front p {
+        padding: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .back {
+        transform: rotateY(-180deg);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background-color: #ffffff;
+        border-radius: 10px;
+
+    }
+
+    .back p {
+        padding: 1rem;
+        /* padding-bottom: 1rem; */
+    }
+
+    .back h3 {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .back li {
+        line-height: 1rem;
+        font-size: 12px;
+    }
+
+    .card:hover > .front {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+    
+    .card:hover > .back {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+    
+    .front .back {
+        background-color: white;
+        transition-property: transform, opacity;
+        transition-duration: 0.5s;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+        background-color: #ffffff;
+    }
+
+
+
   }
   
+    @media screen and (max-width:850px) {
+
+        .card {
+            width: auto;
+            height: auto;
+            position: relative;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .card > .front, .card > .back {
+            height: auto;
+            /* padding: 1em, 2em; */
+        }
+
+        .front {
+            border-radius: 10px;
+            transform: rotateY(0deg);
+            background-color: #ffffff;
+        }
+
+        .front h3 {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .front p {
+            padding: 1rem;
+            padding-bottom: 2rem;
+        }
+
+        .back {
+            transform: rotateY(-180deg);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            background-color: #ffffff;
+            border-radius: 10px;
+
+        }
+
+        .back p {
+            padding: 1rem;
+            /* padding-bottom: 1rem; */
+        }
+
+        .back h3 {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .back li {
+            line-height: 2rem;
+        }
+
+        .card:hover > .front {
+            transform: rotateY(180deg);
+            opacity: 0;
+        }
+        
+        .card:hover > .back {
+            transform: rotateY(0deg);
+            opacity: 1;
+        }
+        
+        .front .back {
+            background-color: white;
+            transition-property: transform, opacity;
+            transition-duration: 0.5s;
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            background-color: #ffffff;
+        }
+
+
+        .dict_child {
+            width: 85%;
+            margin: auto;
+            background-color: rgb(128, 135, 110);
+            border-radius: 8px;
+            padding-bottom: 5%;
+            
+        }
     
+        .dict_child h3 {
+            text-align: center;
+            font-weight: 700;
+        }
+    
+        .dict_child p {
+            margin-left: 10%;
+            margin-right: 10%;
+            padding: 10px;
+        }
+    
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    
+        .title_line p { 
+            width: 85%;
+            text-align: left;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        .history {
+            width: 85%;
+            margin: auto;
+            background-color: rgb(128, 135, 110);
+            border-radius: 8px;
+            padding-bottom: 5%;
+        }
+        
+        .flex_container_history {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    
+        .history p {
+            margin-left: 10%;
+            margin-right: 10%;
+            padding: 10px;
+        }
+    
+        .history h2 {
+            text-align: center;
+            padding-top: 20px;
+        }
+    
+        figure figcaption {
+            text-align: center;
+            font-style: italic;
+            font-weight: 100;
+            font-size: 12px;
+            padding-top: 8px;
+            padding-bottom: 16px;
+        }
+    }
     
   
      @media screen and (prefers-reduced-motion: reduce){
